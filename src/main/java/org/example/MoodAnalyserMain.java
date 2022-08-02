@@ -1,4 +1,5 @@
 package org.example;
+
 public class MoodAnalyserMain {
     private String message;
 
@@ -19,12 +20,12 @@ public class MoodAnalyserMain {
             if(message.length() == 0)
                 throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_EMPTY, "Please Enter Some Message");
 
-            if (message.contains("Happy"))
+            if (message.contains("sad"))
                 return "SAD";
             else
                 return "HAPPY";
         }catch(NullPointerException e) {
-            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL, "Enter a Proper Message");
+            throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.ENTERED_NULL, "Enter a Proper Mood");
         }
     }
 }
