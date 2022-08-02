@@ -6,8 +6,8 @@ import org.junit.Assert;
 public class MoodAnalyserTest {
     @Test
     public void TestMoodAnalysis() {
-        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain("I am in Happy Mood");
+        MoodAnalyserMain moodAnalyser = new MoodAnalyserMain(null);
         String mood = moodAnalyser.analyseMood();
-        Assert.assertEquals("SAD", mood);
+        Assert.assertEquals("NULL", mood);
     }
 }
